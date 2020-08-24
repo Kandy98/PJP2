@@ -2,6 +2,7 @@ package com.kandarp.pjp2_week2;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -48,12 +49,12 @@ public class Main {
  			System.out.println("Choose operation to be performed: ");
  			map.forEach((k, v) -> System.out.println(k + ": " + v));
 		
- 			Map<Integer, IOperationsHandler> operationHandlers = new HashMap<Integer, IOperationsHandler>();
+ 			Map<Integer, Object> operationHandlers = new HashMap<>();
  			operationHandlers.put(1, new DurationBetweenDatesHandler());
  			operationHandlers.put(2, new FindADateHandler());
  			operationHandlers.put(3, new FindDayOfTheWeekHandler());
  			operationHandlers.put(4, new FindWeekNumberHandler());
- 			operationHandlers.put(5,  new FindDateFromGivenPhraseHandler());
+ 			operationHandlers.put(5, new FindDateFromGivenPhraseHandler());
 			operationHandlers.put(6, new DisplayHistoryHandler());
  			
  			int d1 = Scan.sc.nextInt();
@@ -83,9 +84,10 @@ public class Main {
  				System.err.println("IOException: " + msg.getMessage());
  			}
  			
- 			IOperationsHandler operation = operationHandlers.get(d1);
+			IOperationsHandler operation = (IOperationsHandler) operationHandlers.get(d1);
+ 					
  			try {
-				operation.handleOperation(locale);
+				Object obj = operation.handleOperation(locale);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

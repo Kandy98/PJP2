@@ -11,7 +11,7 @@ import java.util.Map;
 public class FindDateFromGivenPhraseHandler implements IOperationsHandler {
 
 	@Override
-	public void handleOperation(Locale locale) throws IOException {
+	public LocalDate handleOperation(Locale locale) throws IOException {
 		
 		LocalDate currDate = LocalDate.now();
 		
@@ -45,8 +45,6 @@ public class FindDateFromGivenPhraseHandler implements IOperationsHandler {
  		String filename= "history.txt";
 		FileWriter fw = new FileWriter(filename,true);
  		
- 		String ch = "y";
- 		while(ch.equals("y")) {
  			System.out.println("Enter a phrase below: ");
  			String phrase = Scan.sc.nextLine();
  			
@@ -119,32 +117,20 @@ public class FindDateFromGivenPhraseHandler implements IOperationsHandler {
  					fw.write(n + " " + phrases.get(phraseOption) + ": " + finalDate
  							.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM, yyyy", locale)) + "\n");
  				}
+ 				
+ 				fw.close();
+ 				return finalDate;
  			} 
  			else {
  				System.out.println("INVALID PHRASE");
  				
  				fw.write("INVALID PHRASE \n");
+ 				
+ 				
+ 				fw.close();
+ 				return LocalDate.MIN;
+
  			}
- 			
- 			System.out.println("Want to enter another phrase? (y/n): ");
- 			String choice = Scan.sc.next();
- 			
- 			fw.write("Want to enter another phrase? (y/n): \n");
- 			fw.write("choice entered: " + choice + "\n");
- 			
- 			Scan.sc.nextLine();
- 			if(choice.equals("n") || choice.equals("N"))
- 				break;
- 			else if(choice.equals("y") || choice.equals("Y"))
- 				continue;
- 			else {
- 				System.out.println("INVALID CHOICE!! Exiting program.");
- 				fw.write("INVALID CHOICE!! Exiting program. \n");
- 				break;
- 			}
- 		}
- 		
- 		fw.close();
 	}
 
 }

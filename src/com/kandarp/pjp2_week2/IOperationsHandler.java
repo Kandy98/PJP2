@@ -4,5 +4,5 @@ import java.io.IOException;
 import java.util.Locale;
 
 public interface IOperationsHandler {
-	public void handleOperation(Locale locale) throws IOException;
+	public Object handleOperation(Locale locale) throws IOException;
 }

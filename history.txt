@@ -24,3 +24,81 @@ Input Option :6
 5: Find date from given phrase
 6: Display history
 Input Option :6
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :1
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-08-24
+Enter Date 2 (yyyy-mm-dd): 2020-10-21
+The duration between the dates is:
+1months3weeks and6days 
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-08-24
+Enter Date 2 (yyyy-mm-dd): 2020-10-24
+The duration between the dates is:
+2months0weeks and0days 
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-08-24
+Enter Date 2 (yyyy-mm-dd): 2020-10-24
+The duration between the dates is:
+2months0weeks and0days 
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-10-24
+Enter Date 2 (yyyy-mm-dd): -999999999-01-01
+The duration between the dates is:
+-9months-3weeks and-2days 
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :1
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-10-12
+Enter Date 2 (yyyy-mm-dd): 2020-10-14
+The duration between the dates is:
+0months0weeks and2days 
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-10-14
+Enter Date 2 (yyyy-mm-dd): -999999999-01-01
+The duration between the dates is:
+-9months-1weeks and-6days 
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-10-12
+Enter Date 2 (yyyy-mm-dd): 2020-10-14
+The duration between the dates is:
+0months0weeks and2days 
+Enter a Date (yyyy-mm-dd): 
+Date entered: 2020-08-24
+Choose option from below: 
+1 Find a date after 2020-08-24
+2 Find a date before 2020-08-24
+Choice entered: 1
+Choose units to be added from below: 
+1: Day(s)
+2: Week(s)
+3: Month(s)
+Choice entered: 1
+Enter Day(s) to be added: 
+Value entered: 4
+Final Date after adding 4 Day(s) is Friday, 28 August, 2020
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-10-12
+Enter Date 2 (yyyy-mm-dd): 2020-10-14
+The duration between the dates is:
+0months0weeks and2days 
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :5
+Enter a phrase below: 
+phrase enterd: tomorrow
+tomorrow: Tuesday, 25 August, 2020

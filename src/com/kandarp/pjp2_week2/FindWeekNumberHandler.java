@@ -9,7 +9,7 @@ import java.util.Locale;
 public class FindWeekNumberHandler implements IOperationsHandler {
 
 	@Override
-	public void handleOperation(Locale locale) throws IOException {
+	public Integer handleOperation(Locale locale) throws IOException {
 		String filename= "history.txt";
 		FileWriter fw = new FileWriter(filename,true);
 		
@@ -23,6 +23,8 @@ public class FindWeekNumberHandler implements IOperationsHandler {
 		
 		fw.write(d1.get(WeekFields.of(locale).weekOfYear()));
 		fw.close();
+		
+		return d1.get(WeekFields.of(locale).weekOfYear());
 	}
 
 }

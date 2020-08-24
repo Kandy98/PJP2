@@ -9,7 +9,7 @@ import java.util.Locale;
 public class FindDayOfTheWeekHandler implements IOperationsHandler {
 
 	@Override
-	public void handleOperation(Locale locale) throws IOException {
+	public String handleOperation(Locale locale) throws IOException {
 		
 		String filename= "history.txt";
 		FileWriter fw = new FileWriter(filename,true);
@@ -25,6 +25,8 @@ public class FindDayOfTheWeekHandler implements IOperationsHandler {
 		fw.write(d1.format(DateTimeFormatter.ofPattern("EEEE", locale)) + "\n");
 			
 		fw.close();
+		
+		return d1.format(DateTimeFormatter.ofPattern("EEEE", locale));
 	}
 
 }
