@@ -1,0 +1,26 @@
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :1
+Enter dates to find the duration between them 
+Enter Date 1 (yyyy-mm-dd): 2020-05-12
+Enter Date 2 (yyyy-mm-dd): 2020-08-24
+The duration between the dates is:
+3months1weeks and5days 
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :6
+1: Duration between dates
+2: Find a date
+3: Find day of the week
+4: Find week number
+5: Find date from given phrase
+6: Display history
+Input Option :6
