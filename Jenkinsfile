@@ -19,11 +19,6 @@ pipeline {
                 sh 'mvn test'
                 sh 'mvn install'
             }
-            post {
-                success {
-                    junit 'target/surefire-reports/*.xml' 
-                }
-            }
         }
     }
 }
